@@ -36,23 +36,18 @@ function setData() {
                             </div>
                             </div>
                     `;
-
     task.innerHTML += newData;
   });
 }
-
 setData();
-
 // add new item to the list
-
 addBtn.addEventListener('click', () => {
   if (input.value.trim() !== '') {
     addlist(input.value.trim());
     setData();
     input.value = '';
-  } 
+  }
 });
-
 // Delete functionality
 task.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-trash-can')) {
@@ -70,7 +65,6 @@ task.addEventListener('click', (e) => {
     e.target.parentElement.children[2].classList.value += ' show';
   }
   if (e.target.classList.contains('fa-arrow-right')) {
-   
     updateData(e.target.parentElement.parentElement.children[0].children[2].value,
       e.target.parentElement.parentElement.children[0].children[2].id);
     setData();

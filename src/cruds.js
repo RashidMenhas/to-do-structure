@@ -1,7 +1,7 @@
 let arrayobj = [];
 export const addlist = (value) => {
   arrayobj.push({
-    index: arrayobj.length,
+    index: arrayobj.length +1,
     description: value,
     completed: false,
   });

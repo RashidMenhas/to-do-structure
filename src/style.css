@@ -91,6 +91,10 @@ form {
   display: none;
 }
 
+.fa-arrow-right {
+  display: none;
+}
+
 .item-btn {
   display: flex;
   flex-direction: row;
@@ -115,7 +119,7 @@ form {
   outline: none;
 }
 
-.item.completed p {
+.completed {
   text-decoration: line-through;
   color: #000;
 }

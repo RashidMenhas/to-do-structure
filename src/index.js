@@ -1,10 +1,13 @@
 import './style.css';
 import './index.html';
-import { addlist, getdata, removetask } from './cruds.js';
+import {
+  addlist, checkedItem, clearAllData, getdata, removetask, updateData,
+} from './cruds.js';
 
 const input = document.querySelector('.entered-list');
 const addBtn = document.querySelector('.add-btn');
 const task = document.querySelector('.task');
+const clearBtn = document.getElementById('clear-btn');
 
 input.addEventListener('keyup', () => {
   if (input.value.trim() !== 0) {
@@ -13,22 +16,23 @@ input.addEventListener('keyup', () => {
     addBtn.classList.remove('active');
   }
 });
-const arrayobj = getdata();
 
 function setData() {
+  const arrayobj = getdata();
   let newData;
   task.innerHTML = '';
   arrayobj.forEach((item) => {
     newData = `
-                  <div class="item">
-                <div class="text">
+                  <div class="item" id="${item.index}">
+                <div class="text" id="${item.index}">
                                 <input class="checkbox" type="checkbox" id="checbox">
                                 <p class="label">${item.description}</p>
-                                <input class="edit-input" type="text" value="${item.description}">
+                                <input  id="${item.index}" class="edit-input" type="text" value="${item.description}">
                             </div>
                             <div class="item-btn" id="${item.index}">
                                 <i id="deleted" class="fa-solid fa-trash-can"></i>
                                 <i id ="menu" class="fa-solid fa-ellipsis-vertical"></i>
+                                <i id="update" class="fa-solid fa-arrow-right"></i>
                             </div>
                             </div>
                     `;
@@ -67,11 +71,45 @@ task.addEventListener('click', (e) => {
     e.target.classList.add('hidden');
     e.target.parentElement.children[2].classList.value += ' show';
   }
+  if (e.target.classList.contains('edit-input')) {
+    console.log(e.target.parentElement.parentElement.children[1].children[2].classList.add('show'));
+    console.log(e.target.parentElement.parentElement.children[1].children[0].classList.remove('show'));
+    console.log(e.target.parentElement.parentElement.children[1].children[1].classList.add('hidden'));
+  }
+  if (e.target.classList.contains('fa-arrow-right')) {
+    console.log(e.target.parentElement.parentElement.children[1].children[0].classList.remove('show'));
+    console.log(e.target.parentElement.parentElement.children[1].children[1].classList.add('show'));
+    console.log(e.target.parentElement.parentElement.children[1].children[2].classList.remove('show'));
+    updateData(e.target.parentElement.parentElement.children[0].children[2].value,
+      e.target.parentElement.parentElement.children[0].children[2].id);
+    setData();
+  }
 });
+
+function setCheckedList() {
+  document.querySelectorAll('.item').forEach((list, index) => {
+    const data = JSON.parse(localStorage.getItem('tasks'));
+    if (data[index].completed === true) {
+      list.children[0].children[0].setAttribute('checked', 'checked');
+      list.children[0].children[1].classList.add('completed');
+    } else if (data[index].completed === false) {
+      list.children[0].children[0].removeAttribute('checked');
+      list.children[0].children[1].classList.remove('completed');
+    }
+  });
+}
 
 task.addEventListener('click', (e) => {
   if (e.target.classList.contains('checkbox')) {
-    e.target.parentElement.parentElement.classList
-      .toggle('completed');
+    const divId = e.target.parentElement;
+    checkedItem(divId.id);
+    setCheckedList();
   }
+});
+setCheckedList();
+
+clearBtn.addEventListener('click', () => {
+  clearAllData();
+  setData();
+  // setCheckedList();
 });

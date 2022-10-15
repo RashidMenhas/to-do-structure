@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # To Do List
-To-Do List is a simple yet very help project to keep track of your daily/weekly activities. 
+To-Do List is a simple yet very help project to keep track of your daily/weekly activities. Now follow the suggestion to make it and keep a record in a local storage.
 
 ### This project is a task by Microverse.
 
@@ -15,7 +15,7 @@ To-Do List is a simple yet very help project to keep track of your daily/weekly 
 ## Built With
 
 - HTML, CSS & JS/ES6
-- Webpack & Linter
+- Webpack & Linter with module
 
 ## Getting Started
 

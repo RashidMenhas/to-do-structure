@@ -50,9 +50,7 @@ addBtn.addEventListener('click', () => {
     addlist(input.value.trim());
     setData();
     input.value = '';
-  } else {
-    alert('Please Fill the field');
-  }
+  } 
 });
 
 // Delete functionality
@@ -71,15 +69,8 @@ task.addEventListener('click', (e) => {
     e.target.classList.add('hidden');
     e.target.parentElement.children[2].classList.value += ' show';
   }
-  if (e.target.classList.contains('edit-input')) {
-    console.log(e.target.parentElement.parentElement.children[1].children[2].classList.add('show'));
-    console.log(e.target.parentElement.parentElement.children[1].children[0].classList.remove('show'));
-    console.log(e.target.parentElement.parentElement.children[1].children[1].classList.add('hidden'));
-  }
   if (e.target.classList.contains('fa-arrow-right')) {
-    console.log(e.target.parentElement.parentElement.children[1].children[0].classList.remove('show'));
-    console.log(e.target.parentElement.parentElement.children[1].children[1].classList.add('show'));
-    console.log(e.target.parentElement.parentElement.children[1].children[2].classList.remove('show'));
+   
     updateData(e.target.parentElement.parentElement.children[0].children[2].value,
       e.target.parentElement.parentElement.children[0].children[2].id);
     setData();

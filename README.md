@@ -1,51 +1,61 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # To Do List
+To-Do List is a simple yet very help project to keep track of your daily/weekly activities. 
 
-> This project about To Do List
+### This project is a task by Microverse.
+
+#### Milestones:
+
+- [x] Use Webpack.
+- [x] Add List structure of To-Do-List.
+- [x] Make the list Interactive.
+- [x] Implement add and remove items functionality.
 
 ## Built With
 
-- HTML
-- CSS
-- javascript
-
-## Live Demo (if available)
-
-[Live Demo Link](https://rashidmenhas.github.io/to-do-structure/)
+- HTML, CSS & JS/ES6
+- Webpack & Linter
 
 ## Getting Started
 
-git clone: https://github.com/RashidMenhas/to-do-structure.git
+> In order to use the project files, Kindly follow these steps:
 
-cd to-do-structure
+### Steps
 
-## Authors
+- To clone the project select the desired directory in cmd and run: `git clone https://github.com/RashidMenhas/to-do-structure.git`
+- Install npm dependencies: `npm install`.
+- To check the live preview: `npm run start`
+- For StyLint test, run: `npx stylelint "**/*.{css,scss}"`
+- For WebHint test, run: `npx hint .`
+- For EsLint test, run: `npx eslint .`
 
-👤 **Rashid Menhas**
+### Prerequisites
 
-- GitHub: [@githubhandle](https://github.com/RashidMenhas)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rashid-menhas-6634aa245/)
+- Have basic level knowledge about HTML/CSS/JS/ES6
+- Have basic level knowledge about linters/Webpack
+- Have basic level knowledge about the working of website
+
+## Author
+
+#### Rashid Menhas
+
+[GitHub](https://github.com/RashidMenhas) | [LinkedIn](https://www.linkedin.com/in/rashid-menhas-6634aa245/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/RashidMenhas/to-do-structure/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a ⭐ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+> Task provided by Microverse
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+- This project is [GENERAL PUBLIC LICENSE](https://github.com/RashidMenhas/to-do-structure/blob/main/LICENSE).

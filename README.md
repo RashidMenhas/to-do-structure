@@ -15,7 +15,7 @@ To-Do List is a simple yet very help project to keep track of your daily/weekly 
 ## Built With
 
 - HTML, CSS & JS/ES6
-- Webpack & Linter
+- Webpack & Linter with module
 
 ## Getting Started
 

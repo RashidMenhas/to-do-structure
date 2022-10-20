@@ -1,17 +1,17 @@
 let arrayobj = [];
 export const addlist = (value) => {
   arrayobj.push({
-    index: arrayobj.length + 1,
+    index: arrayobj.length,
     description: value,
     completed: false,
   });
-
   localStorage.setItem('tasks', JSON.stringify(arrayobj));
 };
 
 export const getdata = () => {
   const a = localStorage.getItem('tasks');
   arrayobj = JSON.parse(a);
+
   if (arrayobj == null) {
     arrayobj = [];
   }

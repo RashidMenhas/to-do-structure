@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './style.css';
 import './index.html';
 import {

@@ -1,9 +1,9 @@
 const arrayobj = [
   {
-    index:1,
-    description:"test",
-    completed:false
-  }
+    index: 1,
+    description: 'test',
+    completed: false,
+  },
 ];
 const addlist = (value) => {
   arrayobj.push({

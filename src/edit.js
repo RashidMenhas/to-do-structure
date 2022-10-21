@@ -15,16 +15,13 @@ const arrayobj = [
     completed: true,
   },
 ];
-const checkedItem = (id) => {
-  if (arrayobj[id].completed === false) {
-    arrayobj[id].completed = true;
-  } else {
-    arrayobj[id].completed = false;
-  }
+
+const updateData = (value, id) => {
+  arrayobj[id].description = value;
   return arrayobj;
 };
 
 const getdata = () => arrayobj;
 
-module.exports = checkedItem;
+module.exports = updateData;
 module.exports = getdata;

@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # To Do List
-To-Do List is a simple yet very help project to keep track of your daily/weekly activities. Now follow the suggestion to make it and keep a record in a local storage.
+To-Do List is a simple yet very help project to keep track of your daily/weekly activities. Now follow the suggestion to make it and keep a record in a local storage. We also verified the functions using Jest to pass the tests.
 
 ### This project is a task by Microverse.
 
@@ -54,8 +54,9 @@ Give a ⭐ if you like this project!
 
 ## Acknowledgments
 
-> Task provided by Microverse
+- Keenan Botes: Github: [@keebot-png](https://github.com/keebot-png)
+- Ayodeji Abidemi: Github [@demix007](https://github.com/demix007)
 
 ## 📝 License
 
-- This project is [GENERAL PUBLIC LICENSE](https://github.com/RashidMenhas/to-do-structure/blob/main/LICENSE).
+- This project is [MIT](./licence) licenced.
